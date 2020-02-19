@@ -51,7 +51,10 @@ public class OI extends SubsystemBase {
       Robot.pneumaticSystem.onBackPistons();
     }else if( s_oi.getXbox().getBumper(Hand.kRight)){
       Robot.pneumaticSystem.offAllPistons();
+    }else if ( s_oi.getXbox().getBumper(Hand.kLeft)){
+      Robot.pneumaticSystem.onTopPistons();
     }
+
 
   }
 

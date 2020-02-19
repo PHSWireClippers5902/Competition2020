@@ -7,7 +7,7 @@ import frc.robot.commands.*;
 /**
  * An example subsystem. You can replace me with your own Subsystem.
  */
-public class pneumaticSystem extends Subsystem {
+public class PneumaticSystem extends Subsystem {
 
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
@@ -20,9 +20,14 @@ public class pneumaticSystem extends Subsystem {
     RobotMap.backSolenoid.set(true);
   }
 
+  public void onTopPistons() {
+    RobotMap.topSolenoid.set(true);
+  }
+
   public void offAllPistons() {
     RobotMap.frontSolenoid.set(false);
     RobotMap.backSolenoid.set(false);
+    RobotMap.topSolenoid.set(false);
   }
 
   public void offFrontPistons() {

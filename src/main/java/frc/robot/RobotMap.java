@@ -30,6 +30,7 @@ public class RobotMap {
     public static Compressor compressor;
     public static SolenoidWrapper frontSolenoid;
     public static SolenoidWrapper backSolenoid;
+    public static SolenoidWrapper topSolenoid;
     public static Ultrasonic ultra;
 
     //SERVO THING
@@ -53,11 +54,12 @@ public class RobotMap {
         lightsL = new Spark(3);
         // Create pneumaticSystem
         compressor = new Compressor(0);
-        frontSolenoid = new SolenoidWrapper(1);
-        backSolenoid = new SolenoidWrapper(0);
+        frontSolenoid = new SolenoidWrapper(0);
+        backSolenoid = new SolenoidWrapper(1);
+        topSolenoid = new SolenoidWrapper(2);
         frontSolenoid.set(false);
         backSolenoid.set(false);
         //SERVO THING
-        coolServo = new Servo(0);
+        //coolServo = new Servo(0);
     }
 }

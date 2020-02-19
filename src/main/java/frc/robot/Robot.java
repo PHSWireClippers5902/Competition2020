@@ -20,9 +20,7 @@ import frc.robot.RobotMap;
 import frc.robot.subsystems.FlyWheel;
 
 
-import edu.wpi.first.wpilibj.DriverStation.Alliance;
-import frc.robot.subsystems.pneumaticSystem;
-import edu.wpi.first.wpilibj.Ultrasonic;
+import frc.robot.subsystems.PneumaticSystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -41,8 +39,8 @@ public class Robot extends TimedRobot {
 
   public static FlyWheel flyWheel;
   public static Climb climb;
-  public static lightSystem lightSystem;
-  public static pneumaticSystem pneumaticSystem;
+  public static LightSystem lightSystem;
+  public static PneumaticSystem pneumaticSystem;
 
 
   /**
@@ -58,8 +56,8 @@ public class Robot extends TimedRobot {
     driveTrain = new DriveTrain();
     flyWheel = new FlyWheel();
     climb = new Climb();
-     lightSystem = new lightSystem();
-    pneumaticSystem = new pneumaticSystem();
+     lightSystem = new LightSystem();
+    pneumaticSystem = new PneumaticSystem();
     oi = new OI();
   }
 
@@ -78,6 +76,8 @@ public class Robot extends TimedRobot {
     SmartDashboard.putBoolean("F Pistons", RobotMap.frontSolenoid.get());
     SmartDashboard.putBoolean("B Pistons", RobotMap.backSolenoid.get());
     SmartDashboard.putBoolean("PSI", RobotMap.compressor.getPressureSwitchValue());
+    SmartDashboard.putBoolean("dashboard", true);
+
 
   }
 

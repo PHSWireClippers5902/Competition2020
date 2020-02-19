@@ -4,10 +4,11 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.DriverStation;
 import frc.robot.RobotMap;
 
+
 /**
  * Add your docs here.
  */
-public class lightSystem extends Subsystem {
+public class LightSystem extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
   // public final SpeedController color = RobotMap.lights;
